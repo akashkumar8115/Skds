@@ -1,36 +1,37 @@
-# Crypgo – Free Tailwind CSS & Next.js Website Template
+# Shri Kishori Design Studio
 
-#### Preview
+**Innovate, Transform, Grow – Advanced Tech Services Redefined**
 
- - [Demo](https://themewagon.github.io/Crypgo/)
+Welcome to the official repository of **Shri Kishori Design Studio**, a design-centric tech studio offering cutting-edge services in:
 
-#### Download
- - [Download from ThemeWagon]( https://themewagon.com/themes/crypgo)
- 
- 
-## Getting Started
+- 🎨 Graphic & Brand Design  
+- 🖥️ UI/UX & Web Development  
+- 📱 App Development  
+- 🚀 Digital Marketing  
+- 📩 Digital Invitations  
+- 🧠 Tech Consulting  
 
-1. Clone from Github 
-```
-git clone https://github.com/themewagon/Crypgo.git
-```
-2. Install Dependencies
-```
-npm i
-```
-3. Run local server
-```
-npm run dev
-```
+## 🌟 Our Vision
 
-## Author
+We blend creativity with technology to deliver impactful digital experiences and scalable business solutions — all with a cultural and classy touch.
 
-Design and code is completely written by Getnext.jsTemplates design and development team.  
+## 📂 Tech Stack
 
+- **Frontend:** Next.js, React, Tailwind CSS  
+- **Backend:** Node.js, Express  
+- **Database:** MongoDB  
+- **Design Tools:** Adobe Suite, Figma, After Effects  
 
-## License
+## 📍 Live Website
 
- - Design and Code is Copyright &copy; [Getnext.jsTemplates](https://getnextjstemplates.com)
- - Licensed cover under [MIT]
- - Distributed by [ThemeWagon](https://themewagon.com)
+[https://sk-design-studio.vercel.app](https://sk-design-studio.vercel.app)
 
+## 📞 Contact
+
+📧 Email: [shrikishoridesignstudio@gmail.com](mailto:shrikishoridesignstudio@gmail.com)  
+📸 Instagram: [@g.o.a.t._services](https://www.instagram.com/g.o.a.t._services)  
+🔗 LinkedIn: [SK Design Studio](https://www.linkedin.com/company/goat-services/)
+
+---
+
+> Designed and maintained by [Eeshaan Aggarwal](https://eeshaan24.vercel.app/)
