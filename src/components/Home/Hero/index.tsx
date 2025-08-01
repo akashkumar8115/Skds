@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="container mx-auto lg:max-w-screen-xl px-8">
         <div className="grid grid-cols-12">
           <motion.div {...leftAnimation} className="lg:col-span-7 col-span-12 mt-14">
-            <h1 className="font-medium leading-[1.4] lg:text-[64px] md:text-[58px] text-[44px] lg:text-start text-center text-white mb-6">
+            <h1 className="font-bold leading-[1.4] lg:text-[64px] md:text-[58px] text-[44px] lg:text-start text-center text-white mb-6">
               Design That Speaks <br />
               <span className="text-primary">Tradition</span> with a <br /> 
               <span className="text-primary">Modern Voice</span>
