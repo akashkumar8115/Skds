@@ -22,16 +22,4 @@ We blend creativity with technology to deliver impactful digital experiences and
 - **Database:** MongoDB  
 - **Design Tools:** Adobe Suite, Figma, After Effects  
 
-## 📍 Live Website
 
-[https://sk-design-studio.vercel.app](https://sk-design-studio.vercel.app)
-
-## 📞 Contact
-
-📧 Email: [shrikishoridesignstudio@gmail.com](mailto:shrikishoridesignstudio@gmail.com)  
-📸 Instagram: [@g.o.a.t._services](https://www.instagram.com/g.o.a.t._services)  
-🔗 LinkedIn: [SK Design Studio](https://www.linkedin.com/company/goat-services/)
-
----
-
-> Designed and maintained by [Eeshaan Aggarwal](https://eeshaan24.vercel.app/)
