@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Reviews from "./reviews";
 import { getImagePrefix } from "@/utils/utils";
 
 const Founder = () => {
@@ -32,7 +33,7 @@ const Founder = () => {
             <p className="sm:text-28 text-18 text-muted mb-4">
               Meet Our <span className="text-primary">Visionary</span>
             </p>
-            <h2 className="text-white sm:text-40 text-30 mb-4 font-medium">
+            <h2 className="text-white sm:text-36 text-27 font-medium">
               Guided by <span className="text-primary">Vision,</span> <br/> Grounded in <span className="text-primary">Values.</span>
             </h2>
             <p className="text-white sm:text-lg text-sm mb-5">
@@ -40,6 +41,7 @@ const Founder = () => {
             </p>
           </motion.div>
         </div>
+        <Reviews/>
       </div>
     </section>
   );
