@@ -4,11 +4,8 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { ThemeProvider } from "next-themes";
 import ScrollToTop from "@/components/ScrollToTop";
-import dynamic from "next/dynamic";
+import Aoscompo from "@/utils/aos"; // Direct import
 import { Metadata } from "next";
-
-// Dynamically import Aoscompo to avoid SSR issues
-const Aoscompo = dynamic(() => import("@/utils/aos"), { ssr: false });
 
 const font = DM_Sans({ subsets: ["latin"] });
 

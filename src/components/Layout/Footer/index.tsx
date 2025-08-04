@@ -12,7 +12,11 @@ const Footer: FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-12 lg:gap-20 md:gap-6 sm:gap-12 gap-6 pb-10">
           {/* Logo & Social Icons */}
           <div className="lg:col-span-4 md:col-span-6 col-span-6">
-            <Logo />
+            {/* ✅ Wrap Logo in Link to avoid nested <a> inside Logo */}
+            <Link href="/" aria-label="Shri Kishori Home">
+              <Logo />
+            </Link>
+
             <div className="flex gap-6 items-center mt-8">
               <Link href="#" className="group">
                 <Icon

@@ -1,19 +1,20 @@
-import { getImagePrefix } from "@/utils/utils";
+// src/components/Logo.tsx
 import Image from "next/image";
-import Link from "next/link";
+import { getImagePrefix } from "@/utils/utils";
 
 const Logo: React.FC = () => {
+  const imagePrefix = getImagePrefix();
+
   return (
-    <Link href="/">
-      <Image
-        src={`${getImagePrefix()}images/logo/Radhe2.svg`}
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: "250px", height: "auto" }}
-        quality={100}
-      />
-    </Link>
+    <Image
+      src={`${imagePrefix}images/logo/Radhe2.svg`}
+      alt="Shri Kishori Design Studio Logo"
+      width={250}
+      height={50}
+      style={{ height: "auto" }}
+      quality={100}
+      priority
+    />
   );
 };
 
