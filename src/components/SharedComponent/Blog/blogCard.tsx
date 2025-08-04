@@ -12,8 +12,8 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             <Link href={`/blog/${slug}`} className="group mb-10 flex items-center gap-9">
                 <div className="overflow-hidden rounded-lg">
                     <Image 
-                        src= {`${getImagePrefix()}${coverImage}`}
-                        alt="image"
+                        src={`${getImagePrefix()}${coverImage}`}
+                        alt={`Cover image for blog post: ${title}`}
                         width={300}
                         height={250}
                         className="group-hover:scale-110 duration-300"
