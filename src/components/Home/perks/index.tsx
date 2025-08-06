@@ -1,26 +1,29 @@
+import { Atom } from "@/icons/Atom";
+import { ChartLine } from "@/icons/ChartLine";
+import { HeartHandshake } from "@/icons/HeartHandshake";
 import { getImagePrefix } from "@/utils/utils";
 import Image from "next/image";
 
 const perksData: {
-  icon: string;
+  icon: JSX.Element;
   title: string;
   text: string;
   space: string;
 }[] = [
   {
-    icon: "/images/perks/icon-support.svg",
+    icon: <Atom/>,
     title: "Creative First",
     text: "We lead with originality and cultural elegance.",
     space: "lg:mt-8",
   },
   {
-    icon: "/images/perks/icon-community.svg",
+    icon: <HeartHandshake/>,
     title: "Client Centric",
     text: "Every pixel and line of code tailored to your vision.",
     space: "lg:mt-14",
   },
   {
-    icon: "/images/perks/icon-academy.svg",
+    icon: <ChartLine/>,
     title: "Scalable Solution",
     text: "Design to grow with <br /> your business",
     space: "lg:mt-4",
@@ -46,12 +49,7 @@ const Perks = () => {
                 className="text-center flex items-center justify-end flex-col"
               >
                 <div className="bg-primary bg-opacity-25 backdrop-blur-sm p-4 rounded-full w-fit">
-                  <Image
-                    src= {`${getImagePrefix()}${item.icon}`}
-                    alt={item.title}
-                    width={44}
-                    height={44}
-                  />
+                  {item.icon}
                 </div>
                 <h4 className={`text-white text-28 mb-4 ${item.space}`}>
                   {item.title}

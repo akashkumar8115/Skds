@@ -3,11 +3,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { getImagePrefix } from "@/utils/utils";
+import { User } from "@/icons/User";
 
 const testimonials: {
     title: string;
     short: string;
-    icon: string;
+    icon: JSX.Element;
     background: string;
     body: string;
     width: number;
@@ -17,7 +18,7 @@ const testimonials: {
         {
             title: "Mr. Aarav Pandey",
             short: "Product Manager",
-            icon: "/images/icons/icon-ethereum.svg",
+            icon: <User/>,
             background: "bg-warning bg-opacity-20",
             body: "The attention to detail in their UI work is simply unmatched. Our app not only looks stunning but feels intuitive at every touchpoint.",
             width: 18,
@@ -27,7 +28,7 @@ const testimonials: {
         {
             title: "Mrs. Sanaya Verma",
             short: "Co-Founder",
-            icon: "/images/icons/icon-ethereum.svg",
+            icon: <User/>,
             background: "bg-light_grey",
             body: "SK Design Studio built our website exactly how we envisioned — fast, smooth, and beautifully responsive.",
             width: 18,
@@ -37,7 +38,7 @@ const testimonials: {
         {
             title: "Mr. Rohit Mehta",
             short: "Chief Technical Officer",
-            icon: "/images/icons/icon-ethereum.svg",
+            icon: <User/>,
             background: "bg-warning bg-opacity-20",
             body: "Clean structure, seamless integrations, and lightning-fast delivery — their API development made our backend rock solid.",
             width: 46,
@@ -47,7 +48,7 @@ const testimonials: {
         {
             title: "Mr. Aarav Pandey",
             short: "Product Manager",
-            icon: "/images/icons/icon-ethereum.svg",
+            icon: <User/>,
             background: "bg-warning bg-opacity-20",
             body: "The attention to detail in their UI work is simply unmatched. Our app not only looks stunning but feels intuitive at every touchpoint.",
             width: 18,
@@ -57,7 +58,7 @@ const testimonials: {
         {
             title: "Mrs. Sanaya Verma",
             short: "Co-Founder",
-            icon: "/images/icons/icon-ethereum.svg",
+            icon: <User/>,
             background: "bg-light_grey",
             body: "SK Design Studio built our website exactly how we envisioned — fast, smooth, and beautifully responsive.",
             width: 18,
@@ -67,7 +68,7 @@ const testimonials: {
         {
             title: "Mr. Rohit Mehta",
             short: "Chief Technical Officer",
-            icon: "/images/icons/icon-ethereum.svg",
+            icon: <User/>,
             background: "bg-warning bg-opacity-20",
             body: "Clean structure, seamless integrations, and lightning-fast delivery — their API development made our backend rock solid.",
             width: 46,
@@ -82,8 +83,8 @@ const Reviews = () => {
         dots: true,
         arrows: false,
         infinite: true,
-        autoplaySpeed: 1500,
-        speed: 300,
+        autoplaySpeed: 4000,
+        speed: 1000,
         slidesToShow: 3, // show 3 at once
         slidesToScroll: 1,
         cssEase: "ease-in-out",
@@ -125,13 +126,8 @@ const Reviews = () => {
                         <div key={index} className="pr-6">
                             <div className="px-5 py-6 bg-dark_grey bg-opacity-80 rounded-xl min-h-[240px]">
                                 <div className="flex items-center gap-5">
-                                    <div className={`${item.background} ${item.padding} rounded-full`}>
-                                        <Image
-                                            src={`${getImagePrefix()}${item.icon}`}
-                                            alt="icon"
-                                            width={item.width}
-                                            height={item.height}
-                                        />
+                                    <div className="w-16 h-16 rounded-full bg-light_grey bg-opacity-45 backdrop-blur-sm flex items-center justify-center shrink-0">
+                                        {item.icon}
                                     </div>
                                     <p className="text-white text-xs font-normal">
                                         <span className="text-[18px] font-bold block mb-1">{item.title}</span>

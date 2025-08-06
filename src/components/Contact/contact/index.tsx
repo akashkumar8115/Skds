@@ -1,26 +1,30 @@
+import { CallIcon } from "@/icons/CallIcon";
+import { Emailicon } from "@/icons/Emailicon";
+import { Location } from "@/icons/location";
 import { getImagePrefix } from "@/utils/utils";
+import Email from "next-auth/providers/email";
 import Image from "next/image";
 
 const info: {
-    icon: string;
+    icon: JSX.Element;
     title: string;
     text: string;
     space: string;
 }[] = [
         {
-            icon: "/images/perks/icon-support.svg",
+            icon: <Emailicon />,
             title: "E-mail",
             text: "shri.k.designs@gmail.com <br /> iam.eeshaan24@gmail.com",
             space: "lg:mt-8",
         },
         {
-            icon: "/images/perks/icon-community.svg",
+            icon: <Location />,
             title: "Address",
             text: "Himachal Pradesh <br /> India",
             space: "lg:mt-14",
         },
         {
-            icon: "/images/perks/icon-academy.svg",
+            icon: <CallIcon />,
             title: "Phone Number",
             text: "+91 70186 71028 <br /> +91 98821 58587",
             space: "lg:mt-4",
@@ -45,13 +49,8 @@ const Contact = () => {
                                 key={index}
                                 className="text-center flex items-center justify-end flex-col"
                             >
-                                <div className="bg-primary bg-opacity-25 backdrop-blur-sm p-4 rounded-full w-fit">
-                                    <Image
-                                        src={`${getImagePrefix()}${item.icon}`}
-                                        alt={item.title}
-                                        width={44}
-                                        height={44}
-                                    />
+                                <div className="bg-primary bg-opacity-25 backdrop-blur-sm p-4 rounded-full w-fit h-fit">
+                                    {item.icon}
                                 </div>
                                 <h4 className={`text-white text-28 mb-4 ${item.space}`}>
                                     {item.title}

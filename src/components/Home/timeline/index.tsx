@@ -3,6 +3,10 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { getImagePrefix } from "@/utils/utils";
+import { CircleHelp } from "@/icons/circlehelp";
+import { WandSparkles } from "@/icons/WandSparkles";
+import { Compass } from "@/icons/Compass";
+import { Settings } from "@/icons/Settings";
 
 const TimeLine = () => {
   const ref = useRef(null);
@@ -37,7 +41,7 @@ const TimeLine = () => {
             <div className="md:block hidden relative">
               <div>
                 <Image
-                  src= {`${getImagePrefix()}images/timeline/img.png`} 
+                  src={`${getImagePrefix()}images/timeline/img.png`}
                   alt="image"
                   width={1220}
                   height={1000}
@@ -51,24 +55,13 @@ const TimeLine = () => {
                     Understand your brand, vision & audience through thoughtful discussions.
                   </p>
                 </div>
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-planning.svg`}
-                    alt="Discover"
-                    width={44}
-                    height={44}
-                    className="w-16 h-16 "
-                  />
+                <div className="w-16 h-16 rounded-full bg-light_grey bg-opacity-45 backdrop-blur-sm flex items-center justify-center shrink-0">
+                  <Compass />
                 </div>
               </div>
               <div className="absolute lg:top-40 top-36 lg:right-0 -right-20 w-72 flex items-center gap-6">
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm p-6 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-refinement.svg`}
-                    alt="Refinement"
-                    width={44}
-                    height={44}
-                  />
+                <div className="w-16 h-16 rounded-full bg-light_grey bg-opacity-45 backdrop-blur-sm flex items-center justify-center shrink-0">
+                  <Settings />
                 </div>
                 <div className="text-left">
                   <h5 className="text-muted text-28 mb-3">Refinement</h5>
@@ -84,25 +77,13 @@ const TimeLine = () => {
                     Turn strategy into beautiful visual solutions — from UI to invitations.
                   </p>
                 </div>
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-prototype.svg`}
-                    alt="Prototype"
-                    width={44}
-                    height={44}
-                    className="w-16 h-16 "
-                  />
+                <div className="w-16 h-16 rounded-full bg-light_grey bg-opacity-45 backdrop-blur-sm flex items-center justify-center shrink-0">
+                  <WandSparkles />
                 </div>
               </div>
               <div className="absolute lg:bottom-48 bottom-36 lg:right-0 -right-20 w-72 flex items-center gap-6">
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-prototype.svg`}
-                    alt="Prototype"
-                    width={44}
-                    height={44}
-                    className="w-16 h-16 "
-                  />
+                <div className="w-16 h-16 rounded-full bg-light_grey bg-opacity-45 backdrop-blur-sm flex items-center justify-center shrink-0">
+                  <CircleHelp />
                 </div>
                 <div className="text-left">
                   <h5 className="text-muted text-nowrap text-28 mb-3">

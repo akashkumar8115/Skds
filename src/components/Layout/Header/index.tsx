@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { headerData } from "../Header/Navigation/menuData";
 import Logo from "./Logo";
 import HeaderLink from "../Header/Navigation/HeaderLink";
@@ -11,10 +11,24 @@ const Header: React.FC = () => {
   const [sticky, setSticky] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
+  const scrollThreshold = 250;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > scrollThreshold) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header
-      className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 ${sticky ? " shadow-lg bg-darkmode pt-5" : "shadow-none md:pt-14 pt-5"
-        }`}
+      className={`fixed top-0 z-40 w-full pb-5 transition-all duration-700 ease-in-out ${sticky ? "shadow-lg bg-darkmode pt-5" : "shadow-none md:pt-14 pt-5"}`}
     >
       <div className="lg:py-0 py-2">
         <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md flex items-center justify-between px-4">
@@ -71,7 +85,6 @@ const Header: React.FC = () => {
         </div>
       </div>
     </header>
-
   );
 };
 

@@ -33,7 +33,7 @@ const Founder = () => {
             <p className="sm:text-28 text-18 text-muted mb-4">
               Meet Our <span className="text-primary">Visionary</span>
             </p>
-            <h2 className="text-white sm:text-36 text-27 font-medium">
+            <h2 className="text-white sm:text-36 text-27 font-medium mb-5">
               Guided by <span className="text-primary">Vision,</span> <br/> Grounded in <span className="text-primary">Values.</span>
             </h2>
             <p className="text-white sm:text-lg text-sm mb-5">

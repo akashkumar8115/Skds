@@ -1,7 +1,10 @@
 "use client";
-import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Sparkles } from "@/icons/Sparkles";
+import { Clock8 } from "@/icons/clock8";
+import { Rocket } from "@/icons/Rocket";
+import Image from "next/image";
 import { getImagePrefix } from "@/utils/utils";
 
 const Work = () => {
@@ -22,15 +25,15 @@ const Work = () => {
 
   const services = [
     {
-      icon: "/images/icons/icon-consulting.svg",
+      icon: <Sparkles />,
       text: "Design That Stands Out",
     },
     {
-      icon: "/images/icons/icon-blockchain.svg",
+      icon: <Clock8 />,
       text: "Reliable & Detail-Oriented",
     },
     {
-      icon: "/images/icons/icon-Services.svg",
+      icon: <Rocket />,
       text: "Cultural Elegance, Modern Execution",
     },
   ];
@@ -47,18 +50,13 @@ const Work = () => {
               About <span className="text-primary">Us</span>
             </p>
             <h2 className="sm:text-40 text-30 text-white lg:w-full md:w-70% font-medium">
-              We Don’t Just Design. <br/> We Tell Stories.
+              We Don’t Just Design. <br /> We Tell Stories.
             </h2>
             <div className="grid md:grid-cols-2 gap-7 mt-11">
               {services.map((service, index) => (
                 <div key={index} className="flex items-center gap-5">
-                  <div className="px-5 py-5 bg-light_grey bg-opacity-30 rounded-full">
-                    <Image
-                      src= {`${getImagePrefix()}${service.icon}`}
-                      alt={`${service.text} icon`}
-                      width={40}
-                      height={40}
-                    />
+                  <div className="p-5 bg-light_grey bg-opacity-30 rounded-full flex items-center justify-center">
+                    {service.icon}
                   </div>
                   <p className="text-24 text-muted">{service.text}</p>
                 </div>
@@ -68,7 +66,7 @@ const Work = () => {
           <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12">
             <div className="2xl:-mr-40 mt-9 flex justify-center">
               <Image
-                src= {`${getImagePrefix()}images/work/img work with us.png`}
+                src={`${getImagePrefix()}images/work/img work with us.png`}
                 alt="image"
                 width={600}
                 height={425}

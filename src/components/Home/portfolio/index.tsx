@@ -2,22 +2,26 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { getImagePrefix } from "@/utils/utils";
+import { Code } from "@/icons/code";
+import { WandSparkles } from "@/icons/WandSparkles";
+import { AtSign } from "@/icons/AtSign";
+import { ChartNoAxes } from "@/icons/ChartNoAxes";
 
-const portfolioData: { image: string; title: string }[] = [
+const portfolioData: { icon: string | React.ReactNode; title: string }[] = [
   {
-    image: "/images/portfolio/icon-wallet.svg",
+    icon: <WandSparkles/>,
     title: "Ui/Ux & Graphic Design",
   },
   {
-    image: "/images/portfolio/icon-vault.svg",
+    icon: <Code />,
     title: "Web & App Development",
   },
   {
-    image: "/images/portfolio/icon-mobileapp.svg",
+    icon: <ChartNoAxes/>,
     title: "Digital Marketing & SEO",
   },
   {
-    image: "/images/portfolio/icon-mobileapp.svg",
+    icon: <AtSign/>,
     title: "Branding & Identity",
   },
 ];
@@ -34,7 +38,7 @@ const Portfolio = () => {
             className="lg:-ml-32"
           >
             <Image
-              src= {`${getImagePrefix()}images/portfolio/img portfolio.png`}
+              src={`${getImagePrefix()}images/portfolio/img portfolio.png`}
               alt="Portfolio"
               width={780}
               height={700}
@@ -50,7 +54,8 @@ const Portfolio = () => {
               What we <span className="text-primary">Offer</span>
             </p>
             <h2 className="text-white sm:text-40 text-30 mb-4 font-medium">
-              A design-driven suite of modern services to elevate your brand experience.
+              A design-driven suite of modern services to elevate your brand
+              experience.
             </h2>
             <table className="w-full sm:w-[80%]">
               <tbody>
@@ -61,12 +66,16 @@ const Portfolio = () => {
                   >
                     <td className="py-5">
                       <div className="bg-primary p-4 rounded-full bg-opacity-20 w-fit">
-                        <Image
-                          src= {`${getImagePrefix()}${item.image}`}
-                          alt={item.title}
-                          width={35}
-                          height={35}
-                        />
+                        {typeof item.icon === "string" ? (
+                          <Image
+                            src={`${getImagePrefix()}${item.icon}`}
+                            alt={item.title}
+                            width={35}
+                            height={35}
+                          />
+                        ) : (
+                          item.icon
+                        )}
                       </div>
                     </td>
                     <td className="py-5">
