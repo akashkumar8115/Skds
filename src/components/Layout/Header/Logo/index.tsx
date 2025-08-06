@@ -4,7 +4,6 @@ import Link from "next/link";
 
 const Logo: React.FC = () => {
   return (
-    <Link href="/">
       <Image
         src={`${getImagePrefix()}images/logo/Radhe2.svg`}
         alt="logo"
@@ -13,7 +12,6 @@ const Logo: React.FC = () => {
         style={{ width: "250px", height: "auto" }}
         quality={100}
       />
-    </Link>
   );
 };
 
